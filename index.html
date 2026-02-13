@@ -1,23 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Name Spinner</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <main class="app">
-    <h1>Tap the Wheel to Pick a Name</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin the Name Wheel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Name Wheel</h1>
+      <p class="subtitle">Click <strong>Spin</strong> to randomly pick one name (25% each).</p>
 
-    <div class="wheel-wrap">
-      <div class="pointer" aria-hidden="true"></div>
-      <canvas id="wheel" width="420" height="420" aria-label="Spinning wheel with four names"></canvas>
-    </div>
+      <div class="wheel-shell">
+        <div class="pointer" aria-hidden="true"></div>
 
-    <p id="result" aria-live="polite">Click the wheel to spin.</p>
-  </main>
+        <div id="wheel" class="wheel" role="img" aria-label="Spinning wheel with Clay, Greg, Mark, and Mike">
+          <span class="label l1">Clay</span>
+          <span class="label l2">Greg</span>
+          <span class="label l3">Mark</span>
+          <span class="label l4">Mike</span>
+          <div class="hub" aria-hidden="true"></div>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
-</body>
+      <button id="spinButton" type="button">Spin</button>
+      <p id="result" aria-live="polite">Ready to spin.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
