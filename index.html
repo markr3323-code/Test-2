@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name Spinner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Tap the Wheel to Pick a Name</h1>
+
+    <div class="wheel-wrap">
+      <div class="pointer" aria-hidden="true"></div>
+      <canvas id="wheel" width="420" height="420" aria-label="Spinning wheel with four names"></canvas>
+    </div>
+
+    <p id="result" aria-live="polite">Click the wheel to spin.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
